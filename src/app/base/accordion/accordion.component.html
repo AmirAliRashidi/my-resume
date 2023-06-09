@@ -1,0 +1,15 @@
+<div class="accordion">
+    <div class="accordion-item" *ngFor="let item of items">
+        <div class="accordion-header" (click)="toggleAccordion(item)">
+            <p class="title-beauty">{{ item.title }}</p>
+        </div>
+        <div class="accordion-content" [class.open]="item.open">
+            <ng-container  *ngFor="let sub of item.content">
+                <a [href]="sub.link" class="subtitle-beauty">
+                    <img *ngIf="sub.icon" [src]="'assets/images/' + sub.icon" class="subitem-icons">
+                    {{ sub.title }}
+                </a>
+            </ng-container>
+        </div>
+    </div>
+</div>
