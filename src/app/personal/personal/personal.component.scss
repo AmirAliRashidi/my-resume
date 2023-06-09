@@ -1,0 +1,149 @@
+@use '../../../styles.scss'as *;
+
+.personal-info-container {
+    width: 100%;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .main-personal-info {
+        background-color: var(--theme-bg-color);
+        max-width: 1250px;
+        max-height: 860px;
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        border-radius: 14px;
+        backdrop-filter: blur(20px);
+        font-size: 15px;
+        font-weight: 500;
+
+        .left-side {
+            width: 250px;
+            min-width: 250px;
+            border-right: 1px solid var(--border-color);
+
+            .left-side-header {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                border-bottom: 1px solid var(--border-color);
+                cursor: pointer;
+
+                .button-mac {
+                    width: 15px;
+                    height: 15px;
+                    background-color: #f96057;
+                    border-radius: 50%;
+                    margin-left: 24px;
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .button-icon {
+                        display: none;
+                        width: 9px;
+                        height: 9px;
+                    }
+                }
+
+                .yellow-button {
+                    background-color: #f8ce52 !important;
+                    margin-left: 10px !important;
+                }
+
+                .green-button {
+                    background-color: #5fcf65 !important;
+                    margin-left: 10px !important;
+                }
+            }
+
+            .left-side-header:hover {
+
+                .button-icon {
+                    display: block !important;
+                }
+            }
+        }
+
+        .right-side {
+            display: flex;
+            flex-direction: column;
+            width: inherit;
+
+            .header-right-side {
+                width: 100%;
+                height: 60px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                border-bottom: 1px solid var(--border-color);
+
+                .my-image {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 2px solid var(--theme-color);
+                    margin-left: 22px;
+                    margin: 0 15px;
+                }
+            }
+
+            .right-side-main {
+                .about-container {
+                    padding: 20px;
+                    border-radius: 15px;
+                    margin: 30px;
+                    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                    animation: gradient 15s ease infinite;
+                    background-size: 400% 400%;
+                    display: flex;
+                    flex-direction: row;
+
+                    .about-text {
+                        text-align: justify;
+                    }
+
+                    .content-button{
+                        border-radius: 10px;
+                        background-color: #222fe7;
+                        padding: 8px;
+                        border: none;
+                        margin-top: 15px;
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+
+                    .about-image{
+                        width: 350px;
+                    }
+                }
+
+                @keyframes gradient {
+                    0% {
+                        background-position: 0% 50%;
+                    }
+
+                    50% {
+                        background-position: 100% 50%;
+                    }
+
+                    100% {
+                        background-position: 0% 50%;
+                    }
+                }
+            }
+        }
+    }
+}
