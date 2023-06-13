@@ -36,10 +36,44 @@
                             </button>
                         </a>
                     </div>
-                    <img src="../../../assets/images/front-end-developer.png" class="about-image">
+                    <img src="/assets/images/front-end-developer.png" class="about-image">
                 </div>
-                <div id="projects">
-
+                <div id="skills" class="box-container">
+                    <h4 class="box-headr">My Skills</h4>
+                    <div class="main-skills">
+                        <div class="skill-container" *ngFor="let item of skills">
+                            <div class="skill-detail">
+                                <img [src]="'/assets/images/skill-icons/' + item.icon" class="items-icon">
+                                <p class="item-name">{{ item.name }}</p>
+                            </div>
+                            <app-rating [rating]="item.rating"></app-rating>
+                        </div>
+                    </div>
+                </div>
+                <div id="projects" class="box-container">
+                    <h4 class="box-headr">My Projects</h4>
+                    <div class="main-projects">
+                        <div class="project-box" *ngFor="let item of projects">
+                            <h3>{{ item.name }}</h3>
+                            <p class="project-detail">{{ item.detail }}</p>
+                            <a [href]="item.link" target="_blank" class="project-button">
+                                <button class="button-style">
+                                    Open
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="coffee" class="box-container">
+                    <h4 class="box-headr">Buy Me a Coffee</h4>
+                    <div class="coffee-container">
+                        <a href="https://bmc.link/amiralirashidi" target="_blank">
+                            <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=amiralirashidi&button_colour=BD5FFF&font_colour=ffffff&font_family=Comic&outline_colour=000000&coffee_colour=FFDD00" />
+                        </a>
+                        <a href="https://coffeete.ir/ali_rashidii" target="_blank">
+                            <img src="https://img.buymeacoffee.com/button-api/?emoji=&slug=amiralirashidi&text=کافیته:)&button_colour=ffaf3b&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=c29204" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
