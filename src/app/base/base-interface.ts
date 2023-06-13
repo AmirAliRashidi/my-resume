@@ -9,3 +9,15 @@ interface AcconrdionContent {
     link: string,
     icon?: string,
 }
+
+export interface ISkillsItem {
+    name: string,
+    icon: string,
+    rating: number,
+}
+
+export interface IProjectItem {
+    name: string,
+    detail: string,
+    link: string
+}
