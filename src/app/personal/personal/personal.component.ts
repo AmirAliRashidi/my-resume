@@ -146,9 +146,6 @@ export class PersonalComponent implements OnInit {
       link: "https://sky-lounge.ir/",
     }
   ]
-  ngOnInit() {
 
-  }
-  // https://bmc.link/amiralirashidi
-  // https://coffeete.ir/ali_rashidii
+  ngOnInit() { }
 }

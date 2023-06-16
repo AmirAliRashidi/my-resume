@@ -7,7 +7,7 @@
             <ng-container  *ngFor="let sub of item.content">
                 <a [href]="sub.link" class="subtitle-beauty">
                     <img *ngIf="sub.icon" [src]="'assets/images/' + sub.icon" class="subitem-icons">
-                    {{ sub.title }}
+                    <p class="subitem-title">{{ sub.title }}</p>
                 </a>
             </ng-container>
         </div>

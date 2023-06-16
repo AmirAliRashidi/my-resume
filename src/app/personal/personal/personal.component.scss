@@ -191,7 +191,7 @@
 
                     .project-box {
                         border-radius: 25px;
-                        width: 45%;
+                        width: calc(49% - 40px);
                         height: auto;
                         min-height: 150px;
                         border: 1px solid var(--theme-bg-color);
@@ -205,6 +205,7 @@
                         .project-detail {
                             padding-bottom: 10px;
                             border-bottom: 1px solid var(--border-color);
+                            text-align: justify;
                         }
 
                         .project-button {
@@ -229,7 +230,7 @@
                     }
                 }
 
-                .coffee-container{
+                .coffee-container {
                     width: calc(100% - 40px);
                     display: flex;
                     flex-direction: row;
@@ -263,5 +264,41 @@
         ::-webkit-scrollbar-thumb:hover {
             background-color: #444;
         }
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .about-container {
+        flex-direction: column-reverse !important;
+
+        .about-image {
+            width: 100% !important;
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .project-box {
+        width: inherit !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .left-side {
+        width: 50px !important;
+        min-width: 50px !important;
+    }
+
+    .about-container {
+        margin: 30px 10px !important;
+    }
+
+    .box-container {
+        width: calc(100% - 20px) !important;
+        padding: 0 10px 30px !important;
+    }
+
+    .button-mac {
+        display: none !important;
     }
 }
