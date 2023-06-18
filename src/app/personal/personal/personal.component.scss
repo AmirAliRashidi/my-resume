@@ -350,4 +350,13 @@
     .button-mac {
         display: none !important;
     }
+
+    .job-detail {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .job-title {
+        margin-bottom: 10px !important;
+    }
 }
