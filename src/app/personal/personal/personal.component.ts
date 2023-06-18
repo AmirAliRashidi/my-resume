@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AccordionsItem, ISkillsItem, IProjectItem } from './../../base/base-interface';
+import { AccordionsItem, ISkillsItem, IProjectItem, IJobItem } from './../../base/base-interface';
 
 @Component({
   selector: 'app-personal',
@@ -25,6 +25,11 @@ export class PersonalComponent implements OnInit {
         title: 'Projects',
         link: '#projects',
         icon: 'code.png'
+      },
+      {
+        title: 'Jobs',
+        link: '#jobs',
+        icon: 'work.png'
       },
       {
         title: 'Coffee',
@@ -59,7 +64,7 @@ export class PersonalComponent implements OnInit {
       },
       {
         title: 'Telegram',
-        link: 'https://t.me/AmirAliRashidii',
+        link: 'https://t.me/amirali_rashidii',
         icon: 'telegram.png'
       },
       {
@@ -146,6 +151,27 @@ export class PersonalComponent implements OnInit {
       link: "https://sky-lounge.ir/",
     }
   ]
+
+  jobs: IJobItem[] = [
+    {
+      title: 'HyvaTech',
+      detail: 'Lead a team of frontend developers, providing guidance, support, and technical leadership to drive successful project executaion. frameworks: Angular, VueJs',
+      logo: 'hyvatech.png',
+      website: 'https://hyvatech.com/',
+      date: 'Jun 2021 - Apr 2023 · 1 yr 11 mos',
+    },
+    {
+      title: 'Faraz',
+      detail: 'Developer and maintained monitoring web application using Angular.',
+      logo: 'faraz.png',
+      website: 'https://farazcomm.com/',
+      date: 'Apr 2023 - Present',
+    }
+  ]
+
+  gotoCompany(link: string) {
+    window.open(link, '_blank');
+  }
 
   ngOnInit() { }
 }

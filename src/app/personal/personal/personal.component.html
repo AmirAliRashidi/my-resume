@@ -64,6 +64,21 @@
                         </div>
                     </div>
                 </div>
+                <div id="jobs" class="box-container">
+                    <h4 class="box-headr">My Jobs</h4>
+                    <div class="main-jobs">
+                        <div class="job-container" *ngFor="let item of jobs" (click)="gotoCompany(item.website)">
+                            <div class="job-detail">
+                                <div class="job-title">
+                                    <img [src]="'/assets/images/' + item.logo" class="items-logo">
+                                    <p class="item-name">{{ item.title }}</p>
+                                </div>
+                                <p>{{ item.date }}</p>
+                            </div>
+                            <p class="item-detail">{{ item.detail }}</p>
+                        </div>
+                    </div>
+                </div>
                 <div id="coffee" class="box-container">
                     <h4 class="box-headr">Buy Me a Coffee</h4>
                     <div class="coffee-container">

@@ -248,6 +248,55 @@
                     width: calc(100% - 60px);
                     padding: 0 30px 30px;
                 }
+
+                .main-jobs {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 15px;
+                    background-color: var(--theme-bg-color);
+
+                    .job-container {
+                        width: calc(100% - 40px);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 20px;
+                        border-radius: 15px;
+                        cursor: pointer;
+
+                        .job-detail {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .job-title {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+
+                                .items-logo {
+                                    height: 45px;
+                                    margin-right: 8px;
+
+                                    .item-name {
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+
+                        .item-detail {
+                            margin-top: 10px;
+                            text-align: justify;
+                        }
+                    }
+
+                    .job-container:hover {
+                        background-color: var(--theme-bg-color);
+                    }
+                }
             }
         }
 

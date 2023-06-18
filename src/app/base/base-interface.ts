@@ -21,3 +21,11 @@ export interface IProjectItem {
     detail: string,
     link: string
 }
+
+export interface IJobItem {
+    title: string,
+    logo: string,
+    detail: string,
+    website: string,
+    date: string,
+}

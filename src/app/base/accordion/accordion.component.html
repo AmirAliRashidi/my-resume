@@ -6,7 +6,7 @@
         <div class="accordion-content" [class.open]="item.open">
             <ng-container  *ngFor="let sub of item.content">
                 <a [href]="sub.link" class="subtitle-beauty">
-                    <img *ngIf="sub.icon" [src]="'assets/images/' + sub.icon" class="subitem-icons">
+                    <img *ngIf="sub.icon" [src]="'assets/images/side-icon/' + sub.icon" class="subitem-icons">
                     <p class="subitem-title">{{ sub.title }}</p>
                 </a>
             </ng-container>
