@@ -2,7 +2,6 @@ import { BaseModule } from './../base/base.module';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SideListComponent } from './side-list/side-list.component';
 import { PersonalComponent } from './personal/personal.component';
 
 const routes: Routes = [
@@ -14,7 +13,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    SideListComponent,
     PersonalComponent
   ],
   imports: [

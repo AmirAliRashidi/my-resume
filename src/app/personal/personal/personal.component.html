@@ -12,7 +12,21 @@
                     <img src="/assets/images/subtract-icon.png" class="button-icon">
                 </div>
             </div>
-            <app-accordion [items]="sideList"></app-accordion>
+            <div class="accordion">
+                <div class="accordion-item" *ngFor="let item of sideList">
+                    <div class="accordion-header" (click)="toggleAccordion(item)">
+                        <p class="title-beauty">{{ item.title }}</p>
+                    </div>
+                    <div class="accordion-content" [class.open]="item.open">
+                        <ng-container  *ngFor="let sub of item.content">
+                            <a class="subtitle-beauty" (click)="goTo(sub.link, item.link)">
+                                <img *ngIf="sub.icon" [src]="'assets/images/side-icon/' + sub.icon" class="subitem-icons">
+                                <p class="subitem-title">{{ sub.title }}</p>
+                            </a>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="right-side">
             <div class="header-right-side">
@@ -67,7 +81,7 @@
                 <div id="jobs" class="box-container">
                     <h4 class="box-headr">My Jobs</h4>
                     <div class="main-jobs">
-                        <div class="job-container" *ngFor="let item of jobs" (click)="gotoCompany(item.website)">
+                        <div class="job-container" *ngFor="let item of jobs" (click)="goTo(item.website, true)">
                             <div class="job-detail">
                                 <div class="job-title">
                                     <img [src]="'/assets/images/' + item.logo" class="items-logo">

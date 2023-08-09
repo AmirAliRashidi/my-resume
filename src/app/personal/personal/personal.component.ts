@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AccordionsItem, ISkillsItem, IProjectItem, IJobItem } from './../../base/base-interface';
+import { AccordionsItem, ISkillsItem, IProjectItem, IJobItem } from '../../base-interface';
 
 @Component({
   selector: 'app-personal',
@@ -10,30 +10,31 @@ export class PersonalComponent implements OnInit {
   sideList: AccordionsItem[] = [{
     title: 'Categories',
     open: true,
+    link: false,
     content: [
       {
         title: 'About',
-        link: '#about',
+        link: 'about',
         icon: 'flag.png'
       },
       {
         title: 'Skills',
-        link: '#skills',
+        link: 'skills',
         icon: 'angular.png'
       },
       {
         title: 'Projects',
-        link: '#projects',
+        link: 'projects',
         icon: 'code.png'
       },
       {
         title: 'Jobs',
-        link: '#jobs',
+        link: 'jobs',
         icon: 'work.png'
       },
       {
         title: 'Coffee',
-        link: '#coffee',
+        link: 'coffee',
         icon: 'coffee.png'
       }
     ],
@@ -41,6 +42,7 @@ export class PersonalComponent implements OnInit {
   {
     title: 'Social Link',
     open: true,
+    link: true,
     content: [
       {
         title: 'LinkedIn',
@@ -84,12 +86,12 @@ export class PersonalComponent implements OnInit {
     {
       name: "Html",
       icon: "html.png",
-      rating: 4.5,
+      rating: 4,
     },
     {
       name: "CSS/SCSS",
       icon: "css.png",
-      rating: 4.5,
+      rating: 4,
     },
     {
       name: "JavaScript",
@@ -99,7 +101,7 @@ export class PersonalComponent implements OnInit {
     {
       name: "TypeScript",
       icon: "typescript.png",
-      rating: 3.5,
+      rating: 4,
     },
     {
       name: "Angular",
@@ -124,7 +126,7 @@ export class PersonalComponent implements OnInit {
     {
       name: "Bootstrap",
       icon: "bootstrap.png",
-      rating: 3,
+      rating: 4,
     }
   ]
 
@@ -161,17 +163,27 @@ export class PersonalComponent implements OnInit {
       date: 'Jun 2021 - Apr 2023 · 1 yr 11 mos',
     },
     {
-      title: 'Faraz',
+      title: 'FaraaBeen',
       detail: 'Developer and maintained monitoring web application using Angular.',
-      logo: 'faraz.png',
-      website: 'https://farazcomm.com/',
+      logo: 'faraabeen.png',
+      website: 'https://faraabeen.ir/',
       date: 'Apr 2023 - Present',
     }
   ]
 
-  gotoCompany(link: string) {
-    window.open(link, '_blank');
+  ngOnInit() { }
+
+  goTo(element: any, type: boolean) {
+    if (type) {
+      window.open(element, '_blank');
+    } else {
+
+      let x = document.getElementById(element)
+      x?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   }
 
-  ngOnInit() { }
+  toggleAccordion(item: any) {
+    item.open = !item.open;
+  }
 }

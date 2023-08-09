@@ -12,7 +12,7 @@
         background-color: var(--theme-bg-color);
         max-width: 1250px;
         max-height: 860px;
-        height: 90vh;
+        height: 100%;
         display: flex;
         flex-direction: row;
         overflow: hidden;
@@ -72,6 +72,70 @@
 
                 .button-icon {
                     display: block !important;
+                }
+            }
+
+            .accordion {
+                width: 200px;
+                padding: 25px;
+            
+                .accordion-item {
+                    margin-bottom: 10px;
+            
+                    .accordion-header {
+                        background-color: transparent;
+                        margin-bottom: 10px;
+                        cursor: pointer;
+            
+                        .title-beauty {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: var(--category-acc-color);
+                        }
+            
+                        .accordion-icon {
+                            float: right;
+                        }
+            
+                        .accordion-icon.open {
+                            transform: rotate(180deg);
+                        }
+                    }
+            
+                    .accordion-content {
+                        background-color: transparent;
+                        padding: 10px;
+                        display: none;
+            
+                        .subtitle-beauty {
+                            color: var(--item-acc-color);
+                            padding: 10px;
+                            border-radius: 6px;
+                            text-decoration: none !important;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+            
+                            .subitem-icons {
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 8px;
+                            }
+            
+                            .subitem-title {
+                                display: block;
+                            }
+                        }
+            
+                        .subtitle-beauty:hover {
+                            background-color: var(--hover-menu-bg);
+                        }
+                    }
+            
+                    .accordion-content.open {
+                        display: flex;
+                        flex-direction: column;
+                    }
                 }
             }
         }
@@ -333,6 +397,10 @@
 }
 
 @media only screen and (max-width: 700px) {
+    .personal-info-container {
+        height: 90vh;
+    }
+
     .left-side {
         width: 50px !important;
         min-width: 50px !important;
@@ -358,5 +426,22 @@
 
     .job-title {
         margin-bottom: 10px !important;
+    }
+
+    .accordion{
+        padding: 0 !important;
+        width: 50px !important;
+    }
+
+    .subitem-title {
+        display: none !important;
+    }
+
+    .accordion-header{
+        display: none !important;
+    }
+
+    .subtitle-beauty{
+        padding: 10px 6px !important;
     }
 }
