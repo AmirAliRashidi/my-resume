@@ -1,6 +1,7 @@
 export interface AccordionsItem {
     title: string,
     content: AcconrdionContent[],
+    link: boolean,
     open: boolean,
 }
 
