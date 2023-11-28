@@ -1,8 +1,4 @@
-# MyResume
-
-This is my online portfolio repository, which is written in Angular and styled similar to macOS.
-
-# My CV Website
+# MY RESUME
 
 This is my personal CV website built using Angular and designed to resemble the macOS system. It showcases my skills, work experience, and projects.
 
