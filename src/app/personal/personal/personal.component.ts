@@ -127,6 +127,16 @@ export class PersonalComponent implements OnInit {
       name: "Bootstrap",
       icon: "bootstrap.png",
       rating: 4,
+    },
+    {
+      name: "React JS",
+      icon: "react.png",
+      rating: 2,
+    },
+    {
+      name: "Vue JS",
+      icon: "vuejs.png",
+      rating: 2,
     }
   ]
 
