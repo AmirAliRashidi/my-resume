@@ -29,8 +29,9 @@ To set up the development environment, follow these steps:
 
 1. Clone the repository:
    `git clone https://github.com/amiralirashidi/my-resume.git`
-2. Install the dependencies:
-    `cd my-cv-website`
+2. Go to repository:
+    `cd my-resume`
+3. Install the dependencies:
     `npm install`
-3. Run the development server:
+4. Run the development server:
     `ng serve`
