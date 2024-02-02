@@ -216,32 +216,39 @@
                 .main-skills {
                     width: 100%;
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
                     border-radius: 15px;
-                    background-color: var(--theme-bg-color);
 
                     .skill-container {
-                        width: calc(100% - 40px);
                         display: flex;
-                        flex-direction: row;
+                        flex-direction: column;
                         align-items: center;
-                        justify-content: space-between;
-                        height: 60px;
-                        padding: 0 20px;
+                        justify-content: center;
+                        padding: 15px;
+                        margin: 5px;
+                        background-color: var(--theme-bg-color);
+                        border-radius: 25%;
 
                         .skill-detail {
                             display: flex;
-                            flex-direction: row;
+                            flex-direction: column;
                             align-items: center;
+                            justify-content: center;
+                            width: 60px;
 
                             .items-icon {
                                 width: 45px;
                                 height: 45px;
-                                margin-right: 8px;
+                            }
 
-                                .item-name {
-                                    font-weight: bold;
-                                }
+                            .item-name {
+                                font-size: 12px;
+                                text-align: center;
+                                margin-top: 5px;
+                                font-weight: bold;
                             }
                         }
                     }
@@ -258,7 +265,6 @@
                         border-radius: 25px;
                         width: calc(49% - 40px);
                         height: auto;
-                        min-height: 150px;
                         border: 1px solid var(--theme-bg-color);
                         margin-bottom: 10px;
                         padding: 20px;
@@ -267,10 +273,24 @@
                         flex-direction: column;
                         justify-content: space-between;
 
+                        .project-header {
+                            display: flex;
+                            flex-direction: row;
+
+                            .items-logo {
+                                height: 45px;
+                                margin-right: 8px;
+                                border-radius: 25%;
+                            }
+                        }
+
                         .project-detail {
                             padding-bottom: 10px;
-                            border-bottom: 1px solid var(--border-color);
                             text-align: justify;
+                        }
+
+                        .project-with-link {
+                            border-bottom: 1px solid var(--border-color);
                         }
 
                         .project-button {
@@ -344,10 +364,10 @@
                                 .items-logo {
                                     height: 45px;
                                     margin-right: 8px;
+                                }
 
-                                    .item-name {
-                                        font-weight: bold;
-                                    }
+                                .item-name {
+                                    font-weight: bold;
                                 }
                             }
                         }
@@ -361,6 +381,14 @@
                     .job-container:hover {
                         background-color: var(--theme-bg-color);
                     }
+                }
+
+                .main-github {
+                    width: 100%;
+                    background-color: var(--theme-bg-color);
+                    display: flex;
+                    flex-direction: row;
+
                 }
             }
         }

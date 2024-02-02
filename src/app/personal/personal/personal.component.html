@@ -18,9 +18,10 @@
                         <p class="title-beauty">{{ item.title }}</p>
                     </div>
                     <div class="accordion-content" [class.open]="item.open">
-                        <ng-container  *ngFor="let sub of item.content">
+                        <ng-container *ngFor="let sub of item.content">
                             <a class="subtitle-beauty" (click)="goTo(sub.link, item.link)">
-                                <img *ngIf="sub.icon" [src]="'assets/images/side-icon/' + sub.icon" class="subitem-icons">
+                                <img *ngIf="sub.icon" [src]="'assets/images/side-icon/' + sub.icon"
+                                    class="subitem-icons">
                                 <p class="subitem-title">{{ sub.title }}</p>
                             </a>
                         </ng-container>
@@ -60,7 +61,7 @@
                                 <img [src]="'/assets/images/skill-icons/' + item.icon" class="items-icon">
                                 <p class="item-name">{{ item.name }}</p>
                             </div>
-                            <app-rating [rating]="item.rating"></app-rating>
+                            <!-- <app-rating [rating]="item.rating"></app-rating> -->
                         </div>
                     </div>
                 </div>
@@ -68,9 +69,13 @@
                     <h4 class="box-headr">My Projects</h4>
                     <div class="main-projects">
                         <div class="project-box" *ngFor="let item of projects">
-                            <h3>{{ item.name }}</h3>
-                            <p class="project-detail">{{ item.detail }}</p>
-                            <a [href]="item.link" target="_blank" class="project-button">
+                            <div>
+                                <h3>{{ item.name }}</h3>
+                                <p class="project-detail" [ngClass]="{'project-with-link': item.link}">
+                                    {{ item.detail }}
+                                </p>
+                            </div>
+                            <a [href]="item.link" target="_blank" class="project-button" *ngIf="item.link">
                                 <button class="button-style">
                                     Open
                                 </button>
@@ -93,6 +98,21 @@
                         </div>
                     </div>
                 </div>
+                <div id="github-projects" class="box-container">
+                    <h4 class="box-headr">My Github Public Projects</h4>
+                    <div class="main-projects">
+                        <div class="project-box" *ngFor="let item of github" style="cursor: pointer;"
+                            (click)="goTo(item.link, true)">
+                            <div>
+                                <div class="project-header">
+                                    <img [src]="item.icon" class="items-logo">
+                                    <h3>{{ item.title }}</h3>
+                                </div>
+                                <p class="project-detail">{{ item.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div id="coffee" class="box-container">
                     <h4 class="box-headr">Buy Me a Coffee</h4>
                     <div class="coffee-container">
@@ -100,10 +120,10 @@
                             <img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee"
                                 style="height: 50px !important;width: 217px !important;">
                         </a>
-                        <!-- <a href="https://coffeete.ir/ali_rashidii" target="_blank">
-                            <img
-                                src="https://img.buymeacoffee.com/button-api/?emoji=&slug=amiralirashidi&text=کافیته:)&button_colour=ffaf3b&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=c29204" />
-                        </a> -->
+                        <a href="https://coffeete.ir/ali_rashidii" target="_blank">
+                            <img alt="کافیته"
+                                src="https://img.buymeacoffee.com/button-api/?emoji=&slug=amiralirashidi&text=کافیته&button_colour=ffaf3b&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=c29204" />
+                        </a>
                     </div>
                 </div>
             </div>

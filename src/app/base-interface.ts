@@ -20,7 +20,7 @@ export interface ISkillsItem {
 export interface IProjectItem {
     name: string,
     detail: string,
-    link: string
+    link?: string
 }
 
 export interface IJobItem {
@@ -29,4 +29,11 @@ export interface IJobItem {
     detail: string,
     website: string,
     date: string,
+}
+
+export interface IGitProjects{
+    title: string,
+    description: string,
+    icon: string,
+    link: string
 }
