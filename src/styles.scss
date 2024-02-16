@@ -34,7 +34,7 @@
     --content-title-color: --theme-color;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -60,6 +60,10 @@ div,
 a,
 button {
     color: #fff;
+}
+
+h4 {
+    margin-top: 5px;
 }
 
 .main-background {

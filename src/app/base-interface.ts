@@ -19,21 +19,24 @@ export interface ISkillsItem {
 
 export interface IProjectItem {
     name: string,
-    detail: string,
-    link?: string
+    detail?: string,
+    link?: string,
+    achievements?: string[],
 }
 
 export interface IJobItem {
     title: string,
     logo: string,
-    detail: string,
+    detail?: string,
     website: string,
     date: string,
+    achievements?: string[],
 }
 
 export interface IGitProjects{
     title: string,
-    description: string,
+    description?: string,
     icon: string,
-    link: string
+    link: string,
+    achievements?: string[],
 }

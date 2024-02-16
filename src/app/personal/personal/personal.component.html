@@ -6,7 +6,7 @@
                     <img src="/assets/images/close-icon.png" class="button-icon">
                 </div>
                 <div class="button-mac yellow-button">
-                    <img src="/assets/images/full-screen-icon.png" class="button-icon">
+                    <img src="/assets/images/full-screen-icon.png" class="button-icon" (click)="fulllscreen()">
                 </div>
                 <div class="button-mac green-button">
                     <img src="/assets/images/subtract-icon.png" class="button-icon">
@@ -38,15 +38,12 @@
                     <div>
                         <h1>AmirAli Rashidi</h1>
                         <p class="about-text">
-                            Angular FrontEnd Developer with 4 years of experience building WebSite and
-                            Web Applications Using
-                            Angular and modern JavaScript tools/frameworks. Experienced in building multi-platform
-                            website
-                            using Resposive Web Design/RWD. Passionate about learning and development with a desire to
-                            apply
-                            skills on a larger development team.
+                            Passionate FrontEnd Developer with +3 years of experience building WebSite and Web
+                            Applications Using Angular, React and modern JavaScript tools/frameworks. Experienced in
+                            building multi-platform website using Resposive Web Design/RWD. Passionate about learning
+                            and development with a desire to apply skills on a larger development team.
                         </p>
-                        <a target="_blank" href="/assets/files/amiralirashidi-resume.pdf">
+                        <a target="_blank" href="/assets/files/AmirAliRashidi.pdf">
                             <button class="content-button">
                                 Download Resume
                             </button>
@@ -72,11 +69,15 @@
                         <div class="project-box" *ngFor="let item of projects">
                             <div>
                                 <h3>{{ item.name }}</h3>
-                                <p class="project-detail" [ngClass]="{'project-with-link': item.link}">
+                                <p class="project-detail">
                                     {{ item.detail }}
                                 </p>
+                                <ng-container *ngIf="item.achievements">
+                                    <li *ngFor="let a of item.achievements">{{ a }}</li>
+                                </ng-container>
                             </div>
-                            <a [href]="item.link" target="_blank" class="project-button" *ngIf="item.link">
+                            <a [href]="item.link" target="_blank" class="project-button" *ngIf="item.link"
+                                [ngClass]="{'project-with-link': item.link}">
                                 <button class="button-style">
                                     Open
                                 </button>
@@ -96,6 +97,26 @@
                                 <p>{{ item.date }}</p>
                             </div>
                             <p class="item-detail">{{ item.detail }}</p>
+                            <ng-container *ngIf="item.achievements">
+                                <li *ngFor="let a of item.achievements">{{ a }}</li>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+                <div id="uni" class="box-container">
+                    <h4 class="box-headr">My Educations</h4>
+                    <div class="main-uni">
+                        <div class="uni-container">
+                            <div class="uni-detail">
+                                <div class="uni-title">
+                                    <img src="/assets/images/azad-uni.png" class="items-logo">
+                                    <div class="uni-items">
+                                        <p class="item-name">Bachelor of Computer Engineering</p>
+                                        <p class="item-uni">Islamic Azad University of Yazd</p>
+                                    </div>
+                                </div>
+                                <p>2022 Oct – present</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -110,6 +131,9 @@
                                     <h3>{{ item.title }}</h3>
                                 </div>
                                 <p class="project-detail">{{ item.description }}</p>
+                                <ng-container *ngIf="item.achievements">
+                                    <li *ngFor="let a of item.achievements">{{ a }}</li>
+                                </ng-container>
                             </div>
                         </div>
                     </div>

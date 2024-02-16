@@ -290,7 +290,11 @@
                         }
 
                         .project-with-link {
-                            border-bottom: 1px solid var(--border-color);
+                            border-top: 1px solid var(--border-color);
+                        }
+
+                        li {
+                            padding-bottom: 10px;
                         }
 
                         .project-button {
@@ -302,7 +306,7 @@
                                 border-radius: 10px;
                                 background-color: #222fe7;
                                 border: none;
-                                margin-top: 15px;
+                                margin-top: 8px;
                                 padding: 10px;
                                 cursor: pointer;
                             }
@@ -376,10 +380,63 @@
                             margin-top: 10px;
                             text-align: justify;
                         }
+
+                        li {
+                            padding-bottom: 10px;
+                        }
                     }
 
                     .job-container:hover {
                         background-color: var(--theme-bg-color);
+                    }
+                }
+
+                .main-uni {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 15px;
+                    background-color: var(--theme-bg-color);
+
+                    .uni-container {
+                        width: calc(100% - 40px);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding: 20px;
+                        border-radius: 15px;
+
+                        .uni-detail {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .uni-title {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+
+                                .items-logo {
+                                    height: 45px;
+                                    margin-right: 8px;
+                                }
+
+                                .uni-items {
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    .item-name {
+                                        font-weight: bold;
+                                    }
+
+                                    .item-uni {
+                                        font-weight: 400;
+                                        font-size: 12px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
@@ -426,6 +483,10 @@
 }
 
 @media only screen and (max-width: 700px) {
+    .right-side {
+        width: calc(100% - 55px) !important;
+    }
+
     .personal-info-container {
         height: 90vh;
     }
@@ -448,12 +509,14 @@
         display: none !important;
     }
 
-    .job-detail {
+    .job-detail,
+    .uni-detail {
         flex-direction: column !important;
         align-items: flex-start !important;
     }
 
-    .job-title {
+    .job-title,
+    .uni-title {
         margin-bottom: 10px !important;
     }
 
@@ -472,5 +535,9 @@
 
     .subtitle-beauty {
         padding: 10px 6px !important;
+    }
+
+    .coffee-container {
+        flex-direction: column !important;
     }
 }
