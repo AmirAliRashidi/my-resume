@@ -30,11 +30,6 @@ export class PersonalComponent {
           icon: 'angular.png',
         },
         {
-          title: 'Projects',
-          link: 'projects',
-          icon: 'code.png',
-        },
-        {
           title: 'Jobs',
           link: 'jobs',
           icon: 'work.png',
@@ -43,6 +38,11 @@ export class PersonalComponent {
           title: 'Educations',
           link: 'uni',
           icon: 'university.png',
+        },
+        {
+          title: 'Projects',
+          link: 'projects',
+          icon: 'code.png',
         },
         {
           title: 'Github Projects',
@@ -131,6 +131,10 @@ export class PersonalComponent {
       icon: 'react.png',
       rating: 2,
     },
+    {
+      name: 'Rest API',
+      icon: 'api.png',
+    },
     // {
     //   name: "Vue",
     //   icon: "vuejs.png",
@@ -142,6 +146,11 @@ export class PersonalComponent {
       rating: 4,
     },
     {
+      name: 'Responsive',
+      icon: 'responsive.png',
+      rating: 5,
+    },
+    {
       name: 'Git',
       icon: 'git.png',
       rating: 3,
@@ -150,11 +159,6 @@ export class PersonalComponent {
       name: 'Linux',
       icon: 'linux.png',
       rating: 3,
-    },
-    {
-      name: 'Responsive',
-      icon: 'responsive.png',
-      rating: 5,
     },
   ];
 

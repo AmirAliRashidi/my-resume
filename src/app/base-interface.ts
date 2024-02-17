@@ -14,7 +14,7 @@ interface AcconrdionContent {
 export interface ISkillsItem {
     name: string,
     icon: string,
-    rating: number,
+    rating?: number,
 }
 
 export interface IProjectItem {

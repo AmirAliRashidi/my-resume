@@ -63,28 +63,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="projects" class="box-container">
-                    <h4 class="box-headr">My Projects</h4>
-                    <div class="main-projects">
-                        <div class="project-box" *ngFor="let item of projects">
-                            <div>
-                                <h3>{{ item.name }}</h3>
-                                <p class="project-detail">
-                                    {{ item.detail }}
-                                </p>
-                                <ng-container *ngIf="item.achievements">
-                                    <li *ngFor="let a of item.achievements">{{ a }}</li>
-                                </ng-container>
-                            </div>
-                            <a [href]="item.link" target="_blank" class="project-button" *ngIf="item.link"
-                                [ngClass]="{'project-with-link': item.link}">
-                                <button class="button-style">
-                                    Open
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 <div id="jobs" class="box-container">
                     <h4 class="box-headr">My Jobs</h4>
                     <div class="main-jobs">
@@ -117,6 +95,28 @@
                                 </div>
                                 <p>2022 Oct – present</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="projects" class="box-container">
+                    <h4 class="box-headr">My Projects</h4>
+                    <div class="main-projects">
+                        <div class="project-box" *ngFor="let item of projects">
+                            <div>
+                                <h3>{{ item.name }}</h3>
+                                <p class="project-detail">
+                                    {{ item.detail }}
+                                </p>
+                                <ng-container *ngIf="item.achievements">
+                                    <li *ngFor="let a of item.achievements">{{ a }}</li>
+                                </ng-container>
+                            </div>
+                            <a [href]="item.link" target="_blank" class="project-button" *ngIf="item.link"
+                                [ngClass]="{'project-with-link': item.link}">
+                                <button class="button-style">
+                                    Open
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
