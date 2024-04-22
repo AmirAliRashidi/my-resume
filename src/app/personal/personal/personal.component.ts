@@ -35,14 +35,14 @@ export class PersonalComponent {
           icon: 'work.png',
         },
         {
-          title: 'Educations',
-          link: 'uni',
-          icon: 'university.png',
-        },
-        {
           title: 'Projects',
           link: 'projects',
           icon: 'code.png',
+        },
+        {
+          title: 'Educations',
+          link: 'uni',
+          icon: 'university.png',
         },
         {
           title: 'Github Projects',
@@ -212,10 +212,16 @@ export class PersonalComponent {
 
   jobs: IJobItem[] = [
     {
+      title: 'i4Twins',
+      logo: 'i4twins.jpeg',
+      website: 'https://i4twins.com/',
+      date: 'Apr 2024 - Present',
+    },
+    {
       title: 'FaraaBeen',
       logo: 'faraabeen.png',
       website: 'https://faraabeen.ir/',
-      date: 'Apr 2023 - Present',
+      date: 'Apr 2023 - Apr 2024 · 1 yr 1 mo',
       achievements: [
         'Collaborated with the teams of 6 people to improve the application.',
         'Refactor codes and increase website load time by 40% by reducing loops.',
@@ -226,7 +232,7 @@ export class PersonalComponent {
       title: 'HyvaTech',
       logo: 'hyvatech.png',
       website: 'https://hyvatech.com/',
-      date: 'Jun 2021 - Apr 2023 · 1 yr 11 mos',
+      date: 'Jun 2021 - Apr 2023 · 1 yr 11 mo',
       achievements: [
         'Mentored 5 junior and intern Angular developers, fostering their growth within the software development lifecycle.',
         'Developed a comprehensive employment and judgical application.',
