@@ -2,7 +2,7 @@
 
 .personal-info-container {
     width: 100%;
-    height: 98vh;
+    height: 98dvh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -485,10 +485,6 @@
 @media only screen and (max-width: 700px) {
     .right-side {
         width: calc(100% - 55px) !important;
-    }
-
-    .personal-info-container {
-        height: 90vh;
     }
 
     .left-side {
