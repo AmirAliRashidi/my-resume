@@ -44,16 +44,16 @@ export class PersonalComponent {
           link: 'uni',
           icon: 'university.png',
         },
-        {
-          title: 'Github Projects',
-          link: 'github-projects',
-          icon: 'github.png',
-        },
-        {
-          title: 'Coffee',
-          link: 'coffee',
-          icon: 'coffee.png',
-        },
+        // {
+        //   title: 'Github Projects',
+        //   link: 'github-projects',
+        //   icon: 'github.png',
+        // },
+        // {
+        //   title: 'Coffee',
+        //   link: 'coffee',
+        //   icon: 'coffee.png',
+        // },
       ],
     },
     {
@@ -104,109 +104,111 @@ export class PersonalComponent {
     {
       name: 'Html',
       icon: 'html.png',
-      rating: 4,
     },
     {
       name: 'CSS/SCSS',
       icon: 'css.png',
-      rating: 4,
     },
     {
       name: 'JavaScript',
       icon: 'javascript.png',
-      rating: 4,
     },
     {
       name: 'TypeScript',
       icon: 'typescript.png',
-      rating: 4,
     },
     {
       name: 'Angular',
       icon: 'angular.png',
-      rating: 4,
     },
     {
       name: 'React',
       icon: 'react.png',
-      rating: 2,
-    },
-    {
-      name: 'Rest API',
-      icon: 'api.png',
     },
     // {
-    //   name: "Vue",
-    //   icon: "vuejs.png",
-    //   rating: 2,
+    //   name: 'Rest API',
+    //   icon: 'api.png',
     // },
     {
-      name: 'Bootstrap',
-      icon: 'bootstrap.png',
-      rating: 4,
+      name: "Vue",
+      icon: "vuejs.png",
     },
-    {
-      name: 'Responsive',
-      icon: 'responsive.png',
-      rating: 5,
-    },
+    // {
+    //   name: 'Bootstrap',
+    //   icon: 'bootstrap.png',
+    // },
+    // {
+    //   name: 'Responsive',
+    //   icon: 'responsive.png',
+    //   rating: 5,
+    // },
     {
       name: 'Git',
       icon: 'git.png',
-      rating: 3,
     },
     {
       name: 'Linux',
       icon: 'linux.png',
-      rating: 3,
     },
   ];
 
   projects: IProjectItem[] = [
+    // {
+    //   name: 'BourseTalent',
+    //   detail: `Iran Financial Center, Job Placement Platform.`,
+    //   link: 'https://boursetalent.ifc.ir/',
+    //   achievements: [
+    //     'Using Vue.js scripts instead of Django templates to Increase development speed and readability',
+    //   ],
+    // },
+    // {
+    //   name: 'DadGam',
+    //   detail: `Legal Consultancy Platform`,
+    //   link: 'https://daadgam.com/',
+    //   achievements: [
+    //     'Developing custom formbuilder, resulting in a 50% improvement in consistency in developing.',
+    //     'Add nebular UI library to Angular and create theming.',
+    //     'Using cookie to handle user data in subdomains.',
+    //   ],
+    // },
+    // {
+    //   name: 'Sky-Lounge',
+    //   detail: `Online Menu`,
+    //   link: 'https://sky-lounge.ir/',
+    //   achievements: [
+    //     'Custom UI/UX elements.',
+    //     'Responsive web design with Angular.',
+    //     'Use JSON database to reduse development and host costs.',
+    //   ],
+    // },
+    // {
+    //   name: 'NMS',
+    //   detail: `Node Monitoring System`,
+    //   achievements: [
+    //     'Developed custom DatePicker instead AngularMaterial for better UI/UX',
+    //     'Increase website load time by 20% by reducing loops.',
+    //   ],
+    // },
+    // {
+    //   name: 'BesazBam',
+    //   detail: `Building Services Platform`,
+    //   link: 'https://besazbam.ir/',
+    //   achievements: [
+    //     'Using TypeScript in React for better development',
+    //     'Customize Ant Design UI Library',
+    //   ],
+    // },
     {
-      name: 'BourseTalent',
-      detail: `Iran Financial Center, Job Placement Platform.`,
-      link: 'https://boursetalent.ifc.ir/',
-      achievements: [
-        'Using Vue.js scripts instead of Django templates to Increase development speed and readability',
-      ],
+      name: 'Alpha Medical Assistant',
+      detail:
+        'Developed a smart medical assistant platform for doctors and students, focusing on diagnostic support and X-ray image processing. Redesigned default PrimeNG components to align with brand guidelines, enhancing visual consistency and user satisfaction. Integrated PrimeNG’s Organization Chart to visualize hierarchical medical workflows. Built a fully responsive Angular-based interface, improving mobile engagement and establishing a seamless experience across devices.',
+      link: 'https://www.alphamedical.ir',
     },
     {
-      name: 'DadGam',
-      detail: `Legal Consultancy Platform`,
-      link: 'https://daadgam.com/',
-      achievements: [
-        'Developing custom formbuilder, resulting in a 50% improvement in consistency in developing.',
-        'Add nebular UI library to Angular and create theming.',
-        'Using cookie to handle user data in subdomains.',
-      ],
-    },
-    {
-      name: 'Sky-Lounge',
-      detail: `Online Menu`,
-      link: 'https://sky-lounge.ir/',
-      achievements: [
-        'Custom UI/UX elements.',
-        'Responsive web design with Angular.',
-        'Use JSON database to reduse development and host costs.',
-      ],
-    },
-    {
-      name: 'NMS',
-      detail: `Node Monitoring System`,
-      achievements: [
-        'Developed custom DatePicker instead AngularMaterial for better UI/UX',
-        'Increase website load time by 20% by reducing loops.',
-      ],
-    },
-    {
-      name: 'BesazBam',
-      detail: `Building Services Platform`,
-      link: 'https://besazbam.ir/',
-      achievements: [
-        'Using TypeScript in React for better development',
-        'Customize Ant Design UI Library',
-      ],
+      name: 'RoadTrust',
+      detail:
+        'Designed and developed a cryptocurrency staking platform enabling users to manage high-yield crypto investments. Leveraged Angular and PrimeNG to create an intuitive interface for staking and asset management, resulting in a 25% increase in user registrations within the first quarter. Implemented responsive design principles to ensure cross-device compatibility, reducing mobile bounce rates by 15%. Balanced aesthetic appeal with functional usability to drive investor retention and platform scalability.',
+      link: 'https://roadtrust.net/',
     },
   ];
 
@@ -216,16 +218,25 @@ export class PersonalComponent {
       logo: 'i4twins.jpeg',
       website: 'https://i4twins.com/',
       date: 'Apr 2024 - Present',
+      detail:
+        'i4Twins is an IIoT No-Code Platform for industry 4.0 solutions, this platform helps non-programmer users to design customizable dashboards.',
+      achievements: [
+        'Built core platform features including an application builder, report engine, and rule engine, enabling non-technical users to design custom dashboards and automate workflows.',
+        'Developed dynamic data visualization tools (charts, graphs, heatmaps) to simplify analysis of industrial datasets, improving decision-making.',
+        'Engineered drag-and-drop interfaces, reducing user onboarding time and increasing platform adoption.',
+      ],
     },
     {
       title: 'FaraaBeen',
       logo: 'faraabeen.png',
       website: 'https://faraabeen.ir/',
       date: 'Apr 2023 - Apr 2024 · 1 yr 1 mo',
+      detail:
+        'Development of Communication Networks and Industrial Smart Solutions.',
       achievements: [
-        'Collaborated with the teams of 6 people to improve the application.',
-        'Refactor codes and increase website load time by 40% by reducing loops.',
-        'Improved website design based on implement UI element.',
+        'Optimized front-end performance by 50%, enabling real-time monitoring of 1,500+ communication base stations.',
+        'Integrated Highcharts and Leaflet.js for real-time KPI tracking and geolocation mapping, reducing client-reported issues by 40%.',
+        'Delivered a customizable and user-friendly interface aligned with client specifications and responsive UI/UX for monitoring communication base stations.',
       ],
     },
     {
@@ -234,11 +245,10 @@ export class PersonalComponent {
       website: 'https://hyvatech.com/',
       date: 'Jun 2021 - Apr 2023 · 1 yr 11 mo',
       achievements: [
-        'Mentored 5 junior and intern Angular developers, fostering their growth within the software development lifecycle.',
-        'Developed a comprehensive employment and judgical application.',
-        'Made sure the code was really good by following strict rules such as code reviews, pair programming, and knowledge sharing.',
-        'Comminucate effectively with the backend developers team to swiftly address and resolve critical issues.',
-        'by using scss added theme to change colors by customer opinion.',
+        'Mentored 5 junior developers, advancing their skills in Angular and SDLC.',
+        'Developed a comprehensive employment and judicial application.',
+        'Ensured code quality through rigorous practices including code reviews, pair programming, and knowledge sharing.',
+        'Used SCSS to add a theme to change colors based on customer preferences.',
       ],
     },
   ];
