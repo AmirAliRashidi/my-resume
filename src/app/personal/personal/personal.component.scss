@@ -105,7 +105,8 @@
                     .accordion-content {
                         background-color: transparent;
                         padding: 10px;
-                        display: none;
+                        display: flex;
+                        flex-direction: column;
 
                         .subtitle-beauty {
                             color: var(--item-acc-color);
@@ -131,11 +132,6 @@
                         .subtitle-beauty:hover {
                             background-color: var(--hover-menu-bg);
                         }
-                    }
-
-                    .accordion-content.open {
-                        display: flex;
-                        flex-direction: column;
                     }
                 }
             }

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+
+import { trigger, state, style, transition, animate } from '@angular/animations';
+
 import {
   AccordionsItem,
   ISkillsItem,
@@ -11,6 +14,26 @@ import {
   selector: 'app-personal',
   templateUrl: './personal.component.html',
   styleUrls: ['./personal.component.scss'],
+  animations: [
+    trigger('accordionAnimation', [
+      state(
+        'closed',
+        style({
+          height: '0px',
+          opacity: 0,
+          overflow: 'hidden',
+        })
+      ),
+      state(
+        'open',
+        style({
+          height: '*',
+          opacity: 1,
+        })
+      ),
+      transition('closed <=> open', [animate('500ms ease-in-out')]),
+    ]),
+  ],
 })
 export class PersonalComponent {
   sideList: AccordionsItem[] = [
@@ -130,8 +153,8 @@ export class PersonalComponent {
     //   icon: 'api.png',
     // },
     {
-      name: "Vue",
-      icon: "vuejs.png",
+      name: 'Vue',
+      icon: 'vuejs.png',
     },
     // {
     //   name: 'Bootstrap',
@@ -243,7 +266,7 @@ export class PersonalComponent {
       title: 'HyvaTech',
       logo: 'hyvatech.png',
       website: 'https://hyvatech.com/',
-      date: 'Jun 2021 - Apr 2023 · 1 yr 11 mo',
+      date: 'Mar 2021 – Apr 2023 · 2 yr 2 mo',
       achievements: [
         'Mentored 5 junior developers, advancing their skills in Angular and SDLC.',
         'Developed a comprehensive employment and judicial application.',
@@ -297,7 +320,7 @@ export class PersonalComponent {
       window.open(element, '_blank');
     } else {
       let x = document.getElementById(element);
-      x?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      x?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 

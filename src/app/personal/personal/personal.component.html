@@ -17,7 +17,7 @@
                     <div class="accordion-header" (click)="toggleAccordion(item)">
                         <p class="title-beauty">{{ item.title }}</p>
                     </div>
-                    <div class="accordion-content" [class.open]="item.open">
+                    <div class="accordion-content" [@accordionAnimation]="item.open ? 'open' : 'closed'">
                         <ng-container *ngFor="let sub of item.content">
                             <a class="subtitle-beauty" (click)="goTo(sub.link, item.link)">
                                 <img *ngIf="sub.icon" [src]="'assets/images/side-icon/' + sub.icon"
