@@ -32,11 +32,3 @@ export interface IJobItem {
     date: string,
     achievements?: string[],
 }
-
-export interface IGitProjects{
-    title: string,
-    description?: string,
-    icon: string,
-    link: string,
-    achievements?: string[],
-}

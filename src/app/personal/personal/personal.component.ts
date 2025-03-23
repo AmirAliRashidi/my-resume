@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 
 import {
   AccordionsItem,
   ISkillsItem,
   IProjectItem,
   IJobItem,
-  IGitProjects,
 } from '../../base-interface';
 
 @Component({
@@ -67,16 +72,6 @@ export class PersonalComponent {
           link: 'uni',
           icon: 'university.png',
         },
-        // {
-        //   title: 'Github Projects',
-        //   link: 'github-projects',
-        //   icon: 'github.png',
-        // },
-        // {
-        //   title: 'Coffee',
-        //   link: 'coffee',
-        //   icon: 'coffee.png',
-        // },
       ],
     },
     {
@@ -94,16 +89,6 @@ export class PersonalComponent {
           link: 'https://github.com/amiralirashidi',
           icon: 'github.png',
         },
-        // {
-        //   title: 'GitLab',
-        //   link: 'https://gitlab.com/ali_rashidi',
-        //   icon: 'gitlab.png',
-        // },
-        // {
-        //   title: 'Instagram',
-        //   link: 'https://www.instagram.com/amirali_rashidii/',
-        //   icon: 'instagram.png',
-        // },
         {
           title: 'Telegram',
           link: 'https://t.me/amirali_rashidii',
@@ -148,23 +133,11 @@ export class PersonalComponent {
       name: 'React',
       icon: 'react.png',
     },
-    // {
-    //   name: 'Rest API',
-    //   icon: 'api.png',
-    // },
     {
       name: 'Vue',
       icon: 'vuejs.png',
     },
-    // {
-    //   name: 'Bootstrap',
-    //   icon: 'bootstrap.png',
-    // },
-    // {
-    //   name: 'Responsive',
-    //   icon: 'responsive.png',
-    //   rating: 5,
-    // },
+
     {
       name: 'Git',
       icon: 'git.png',
@@ -276,45 +249,6 @@ export class PersonalComponent {
     },
   ];
 
-  github: IGitProjects[] = [
-    {
-      title: 'Live Menu',
-      link: 'https://amiralirashidi.github.io/live-menu/',
-      icon: 'https://amiralirashidi.github.io/live-menu/assets/img/logo.png',
-      achievements: [
-        'Custom UI/UX elements.',
-        'Responsive web design with Angular.',
-        'Use JSON database.',
-      ],
-    },
-    {
-      title: 'Online Shop',
-      description:
-        'OnlineShop is a Template with home, login and signup page proggrammed by Angular',
-      link: 'https://amiralirashidi.github.io/online-shop/',
-      icon: 'https://amiralirashidi.github.io/online-shop/assets/image/logo.png',
-      achievements: ['Using owl carousel.', 'Custom web design.'],
-    },
-    {
-      title: 'Learnify',
-      description: 'A simple course management application built with Angular.',
-      link: 'https://amiralirashidi.github.io/learnify/',
-      icon: 'https://amiralirashidi.github.io/learnify/assets/img/learnify.jpg',
-      achievements: [
-        'Using modules, components and services.',
-        'Responsive web design.',
-        'Angular Matrial.',
-      ],
-    },
-    {
-      title: 'Custom DatePicker',
-      description: `A custom date picker component for Angular that includes both date and date-time pickers built with Angular.`,
-      link: 'https://amiralirashidi.github.io/custom-datepicker/',
-      icon: 'https://amiralirashidi.github.io/custom-datepicker/assets/img/logo.png',
-      achievements: ['Creating custom UI elements.', 'Support timepicker.'],
-    },
-  ];
-
   goTo(element: any, type: boolean) {
     if (type) {
       window.open(element, '_blank');
@@ -329,7 +263,7 @@ export class PersonalComponent {
   }
 
   fulllscreen() {
-    const doc = window.document as any; // Use type assertion to 'any'
+    const doc = window.document as any;
     const docEl = doc.documentElement;
 
     const requestFullScreen =

@@ -44,7 +44,8 @@
                             to lead cross-functional teams, mentor junior developers, and deliver scalable solutions
                             aligned with Agile workflows.
                         </p>
-                        <a target="_blank" href="https://docs.google.com/document/d/1vsWqLSaRckmBBLRFLPWkR8-UtSvJ-Sz67ANSeeSXYOU/edit?usp=sharing">
+                        <a target="_blank"
+                            href="https://docs.google.com/document/d/1vsWqLSaRckmBBLRFLPWkR8-UtSvJ-Sz67ANSeeSXYOU/edit?usp=sharing">
                             <button class="content-button">
                                 Download Resume
                             </button>
@@ -86,9 +87,9 @@
                     <h4 class="box-headr">My Projects</h4>
                     <div class="main-projects">
                         <div class="project-box" *ngFor="let item of projects">
-                            <div>
+                            <div class="project-detail-container">
                                 <h3>{{ item.name }}</h3>
-                                <p class="project-detail">
+                                <p>
                                     {{ item.detail }}
                                 </p>
                                 <ng-container *ngIf="item.achievements">
@@ -116,42 +117,11 @@
                                         <p class="item-uni">Islamic Azad University of Yazd</p>
                                     </div>
                                 </div>
-                                <p>2022 Oct – present</p>
+                                <p class="uni-date">2022 Oct – present</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- <div id="github-projects" class="box-container">
-                    <h4 class="box-headr">My Github Public Projects</h4>
-                    <div class="main-projects">
-                        <div class="project-box" *ngFor="let item of github" style="cursor: pointer;"
-                            (click)="goTo(item.link, true)">
-                            <div>
-                                <div class="project-header">
-                                    <img [src]="item.icon" class="items-logo">
-                                    <h3>{{ item.title }}</h3>
-                                </div>
-                                <p class="project-detail">{{ item.description }}</p>
-                                <ng-container *ngIf="item.achievements">
-                                    <li *ngFor="let a of item.achievements">{{ a }}</li>
-                                </ng-container>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div id="coffee" class="box-container">
-                    <h4 class="box-headr">Buy Me a Coffee</h4>
-                    <div class="coffee-container">
-                        <a href="https://www.buymeacoffee.com/amiralirashidi" target="_blank">
-                            <img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee"
-                                style="height: 50px !important;width: 217px !important;">
-                        </a>
-                        <a href="https://coffeete.ir/ali_rashidii" target="_blank">
-                            <img alt="کافیته"
-                                src="https://img.buymeacoffee.com/button-api/?emoji=&slug=amiralirashidi&text=کافیته&button_colour=ffaf3b&font_colour=000000&font_family=Comic&outline_colour=000000&coffee_colour=c29204" />
-                        </a>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
